@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Development &mdash; pgpointcloud</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
 
   
     <link rel="shortcut icon" href="_static/favicon.ico"/>
@@ -245,23 +245,15 @@ is based on PostgreSQL 14, PostGIS 3 and the laz-perf support is activated.</p>
 </section>
 <section id="continuous-integration">
 <h2>Continuous Integration<a class="headerlink" href="#continuous-integration" title="Link to this heading"></a></h2>
-<p>pgPointcloud tests are run with <a class="reference external" href="https://github.com/pgpointcloud/pointcloud/actions">Github Actions</a> on several Ubuntu versions
-and with various PostgreSQL/PostGIS releases:</p>
+<p>pgPointcloud tests are run with <a class="reference external" href="https://github.com/pgpointcloud/pointcloud/actions">Github Actions</a>.</p>
+<p>The CI matrix below covers supported PostgreSQL and Ubuntu versions, with and without PostGIS. Each workflow builds the extension, runs the unit tests, generates the documentation, and performs C code formatting and SQL linting checks.</p>
 <table class="docutils align-default">
 <tbody>
 <tr class="row-odd"><td></td>
 <td><p>w/o PostGIS</p></td>
 <td><p>PostGIS 3.3</p></td>
 </tr>
-<tr class="row-even"><td><p>PostgreSQL 13</p></td>
-<td><p><img alt="13_33_jammy" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/jammy_postgres13_postgis33.yml?branch=master&amp;label=Ubuntu%2022.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-22.04%5D+PostgreSQL+13+and+PostGIS+3.3%22" /></p>
-<p><img alt="13_33_noble" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/noble_postgres13_postgis33.yml?branch=master&amp;label=Ubuntu%2024.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-24.04%5D+PostgreSQL+13+and+PostGIS+3.3%22" /></p>
-</td>
-<td><p><img alt="13_33_jammy" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/jammy_postgres13_postgis33.yml?branch=master&amp;label=Ubuntu%2022.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-22.04%5D+PostgreSQL+13+and+PostGIS+3.3%22" /></p>
-<p><img alt="13_33_noble" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/noble_postgres13_postgis33.yml?branch=master&amp;label=Ubuntu%2024.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-24.04%5D+PostgreSQL+13+and+PostGIS+3.3%22" /></p>
-</td>
-</tr>
-<tr class="row-odd"><td><p>PostgreSQL 14</p></td>
+<tr class="row-even"><td><p>PostgreSQL 14</p></td>
 <td><p><img alt="14_33_jammy" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/jammy_postgres14_postgis33.yml?branch=master&amp;label=Ubuntu%2022.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-22.04%5D+PostgreSQL+14+and+PostGIS+3.3%22" /></p>
 <p><img alt="14_33_noble" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/noble_postgres14_postgis33.yml?branch=master&amp;label=Ubuntu%2024.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-24.04%5D+PostgreSQL+14+and+PostGIS+3.3%22" /></p>
 </td>
@@ -269,7 +261,7 @@ and with various PostgreSQL/PostGIS releases:</p>
 <p><img alt="14_33_noble" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/noble_postgres14_postgis33.yml?branch=master&amp;label=Ubuntu%2024.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-24.04%5D+PostgreSQL+14+and+PostGIS+3.3%22" /></p>
 </td>
 </tr>
-<tr class="row-even"><td><p>PostgreSQL 15</p></td>
+<tr class="row-odd"><td><p>PostgreSQL 15</p></td>
 <td><p><img alt="15_33_jammy" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/jammy_postgres15_postgis33.yml?branch=master&amp;label=Ubuntu%2022.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-22.04%5D+PostgreSQL+15+and+PostGIS+3.3%22" /></p>
 <p><img alt="15_33_noble" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/noble_postgres15_postgis33.yml?branch=master&amp;label=Ubuntu%2024.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-24.04%5D+PostgreSQL+15+and+PostGIS+3.3%22" /></p>
 </td>
@@ -277,7 +269,7 @@ and with various PostgreSQL/PostGIS releases:</p>
 <p><img alt="15_33_noble" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/noble_postgres15_postgis33.yml?branch=master&amp;label=Ubuntu%2024.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-24.04%5D+PostgreSQL+15+and+PostGIS+3.3%22" /></p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>PostgreSQL 16</p></td>
+<tr class="row-even"><td><p>PostgreSQL 16</p></td>
 <td><p><img alt="16_33_jammy" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/jammy_postgres16_postgis33.yml?branch=master&amp;label=Ubuntu%2022.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-22.04%5D+PostgreSQL+16+and+PostGIS+3.3%22" /></p>
 <p><img alt="16_33_noble" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/noble_postgres16_postgis33.yml?branch=master&amp;label=Ubuntu%2024.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-24.04%5D+PostgreSQL+16+and+PostGIS+3.3%22" /></p>
 </td>
@@ -285,12 +277,28 @@ and with various PostgreSQL/PostGIS releases:</p>
 <p><img alt="16_33_noble" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/noble_postgres16_postgis33.yml?branch=master&amp;label=Ubuntu%2024.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-24.04%5D+PostgreSQL+16+and+PostGIS+3.3%22" /></p>
 </td>
 </tr>
-<tr class="row-even"><td><p>PostgreSQL 17</p></td>
+<tr class="row-odd"><td><p>PostgreSQL 17</p></td>
 <td><p><img alt="17_33_jammy" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/jammy_postgres17_postgis33.yml?branch=master&amp;label=Ubuntu%2022.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-22.04%5D+PostgreSQL+17+and+PostGIS+3.3%22" /></p>
 <p><img alt="17_33_noble" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/noble_postgres17_postgis33.yml?branch=master&amp;label=Ubuntu%2024.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-24.04%5D+PostgreSQL+17+and+PostGIS+3.3%22" /></p>
 </td>
 <td><p><img alt="17_33_jammy" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/jammy_postgres17_postgis33.yml?branch=master&amp;label=Ubuntu%2022.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-22.04%5D+PostgreSQL+17+and+PostGIS+3.3%22" /></p>
 <p><img alt="17_33_noble" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/noble_postgres17_postgis33.yml?branch=master&amp;label=Ubuntu%2024.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-24.04%5D+PostgreSQL+17+and+PostGIS+3.3%22" /></p>
+</td>
+</tr>
+<tr class="row-even"><td><p>PostgreSQL 18</p></td>
+<td><p><img alt="18_33_jammy" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/jammy_postgres18_postgis33.yml?branch=master&amp;label=Ubuntu%2022.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-22.04%5D+PostgreSQL+18+and+PostGIS+3.3%22" /></p>
+<p><img alt="18_33_noble" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/noble_postgres18_postgis33.yml?branch=master&amp;label=Ubuntu%2024.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-24.04%5D+PostgreSQL+18+and+PostGIS+3.3%22" /></p>
+</td>
+<td><p><img alt="18_33_jammy" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/jammy_postgres18_postgis33.yml?branch=master&amp;label=Ubuntu%2022.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-22.04%5D+PostgreSQL+18+and+PostGIS+3.3%22" /></p>
+<p><img alt="18_33_noble" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/noble_postgres18_postgis33.yml?branch=master&amp;label=Ubuntu%2024.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-24.04%5D+PostgreSQL+18+and+PostGIS+3.3%22" /></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>PostgreSQL 19</p></td>
+<td><p><img alt="19_33_jammy" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/jammy_postgres19_postgis33.yml?branch=master&amp;label=Ubuntu%2022.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-22.04%5D+PostgreSQL+19+and+PostGIS+3.3%22" /></p>
+<p><img alt="19_33_noble" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/noble_postgres19_postgis33.yml?branch=master&amp;label=Ubuntu%2024.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-24.04%5D+PostgreSQL+19+and+PostGIS+3.3%22" /></p>
+</td>
+<td><p><img alt="19_33_jammy" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/jammy_postgres19_postgis33.yml?branch=master&amp;label=Ubuntu%2022.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-22.04%5D+PostgreSQL+19+and+PostGIS+3.3%22" /></p>
+<p><img alt="19_33_noble" src="https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/noble_postgres19_postgis33.yml?branch=master&amp;label=Ubuntu%2024.04&amp;logo=ubuntu:target:https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-24.04%5D+PostgreSQL+19+and+PostGIS+3.3%22" /></p>
 </td>
 </tr>
 </tbody>
@@ -384,7 +392,7 @@ usual (step by step, backtrace, …).</p>
   
     <div class="footer">
         <div class="container">
-            &copy;  2025
+            &copy;  2026
             <a href="https://github.com/pramsey">Paul Ramsey</a>,
             <a href="http://github.com/pblottiere">Paul Blottiere</a>,
             <a href="http://github.com/mbredif">Mathieu Brédif</a>,
