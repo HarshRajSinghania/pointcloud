@@ -186,10 +186,6 @@ The CI matrix below covers supported PostgreSQL and Ubuntu versions, with and wi
 +--------------------+-----------------------+-------------------------+
 |                    | w/o PostGIS           | PostGIS 3.3             |
 +--------------------+-----------------------+-------------------------+
-| PostgreSQL 13      | |13_33_jammy|         | |13_33_jammy|           |
-|                    |                       |                         |
-|                    | |13_33_noble|         | |13_33_noble|           |
-+--------------------+-----------------------+-------------------------+
 | PostgreSQL 14      | |14_33_jammy|         | |14_33_jammy|           |
 |                    |                       |                         |
 |                    | |14_33_noble|         | |14_33_noble|           |
@@ -215,8 +211,6 @@ The CI matrix below covers supported PostgreSQL and Ubuntu versions, with and wi
 |                    | |19_33_noble|         | |19_33_noble|           |
 +--------------------+-----------------------+-------------------------+
 
-.. |13_33_jammy| image:: https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/jammy_postgres13_postgis33.yml?branch=master&label=Ubuntu%2022.04&logo=ubuntu :target: https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-22.04%5D+PostgreSQL+13+and+PostGIS+3.3%22
-
 .. |14_33_jammy| image:: https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/jammy_postgres14_postgis33.yml?branch=master&label=Ubuntu%2022.04&logo=ubuntu :target: https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-22.04%5D+PostgreSQL+14+and+PostGIS+3.3%22
 
 .. |15_33_jammy| image:: https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/jammy_postgres15_postgis33.yml?branch=master&label=Ubuntu%2022.04&logo=ubuntu :target: https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-22.04%5D+PostgreSQL+15+and+PostGIS+3.3%22
@@ -228,8 +222,6 @@ The CI matrix below covers supported PostgreSQL and Ubuntu versions, with and wi
 .. |18_33_jammy| image:: https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/jammy_postgres18_postgis33.yml?branch=master&label=Ubuntu%2022.04&logo=ubuntu :target: https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-22.04%5D+PostgreSQL+18+and+PostGIS+3.3%22
 
 .. |19_33_jammy| image:: https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/jammy_postgres19_postgis33.yml?branch=master&label=Ubuntu%2022.04&logo=ubuntu :target: https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-22.04%5D+PostgreSQL+19+and+PostGIS+3.3%22
-
-.. |13_33_noble| image:: https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/noble_postgres13_postgis33.yml?branch=master&label=Ubuntu%2024.04&logo=ubuntu :target: https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-24.04%5D+PostgreSQL+13+and+PostGIS+3.3%22
 
 .. |14_33_noble| image:: https://img.shields.io/github/actions/workflow/status/pgpointcloud/pointcloud/noble_postgres14_postgis33.yml?branch=master&label=Ubuntu%2024.04&logo=ubuntu :target: https://github.com/pgpointcloud/pointcloud/actions?query=workflow%3A%22%5Bubuntu-24.04%5D+PostgreSQL+14+and+PostGIS+3.3%22
 
