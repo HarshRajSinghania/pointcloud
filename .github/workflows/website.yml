@@ -6,21 +6,35 @@ on:
       - master
   pull_request:
 
+permissions:
+  contents: write
+
 jobs:
   code:
     name: Website
     runs-on: ubuntu-22.04
+
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v2
-      - name: Install sphinx
-        run: sudo apt-get install python3-virtualenv virtualenv
-      - name: Build html documentation
-        run: virtualenv -p /usr/bin/python3 venv && source venv/bin/activate && pip install sphinx sphinx_rtd_theme && cd doc && make html && cd -
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/master' }}
+        uses: actions/checkout@v4
+
+      - name: Install Sphinx
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-virtualenv virtualenv
+
+      - name: Build HTML documentation
+        run: |
+          virtualenv -p /usr/bin/python3 venv
+          source venv/bin/activate
+          pip install sphinx sphinx_rtd_theme
+          cd doc
+          make html
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/master'
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./doc/build/html/
